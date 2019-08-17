@@ -1,0 +1,14 @@
+---
+- name: To execute tasks on the server.
+  hosts: all
+  remote_user: ansible
+  become: true
+  #sudo: yes
+  tasks:
+  - name: To create file on the servers.
+    file:
+     path: /var/tmp/myfile123
+     state: touch
+     owner: ansible
+     group: ansible
+     mode: 644

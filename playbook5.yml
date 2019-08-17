@@ -1,0 +1,16 @@
+---
+- name: To write a the block, rescue and always mode.
+  hosts: all
+  remote_user: ansible
+  become: true
+  vars: 
+    sudousers:
+    - suuser1
+    - suuser2
+    - suuser3
+  tasks:
+  - name: To create users.
+    user: name={{ item }} state=present groups=wheel 
+    with_items: "{{ sudousers }}"
+  - name: To insert the line into the sudoers file
+    lineinfile: path=/etc/sudoers line="%wheel        ALL=(ALL)       NOPASSWD{{":"}} ALL"

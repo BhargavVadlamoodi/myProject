@@ -1,0 +1,24 @@
+---
+- hosts: all
+  remote_user: ansible
+  sudo: yes
+  tasks:
+  - name: To install maria DB
+    yum: name=mariadb state=latest
+    notify: restart the service
+    tags: DB
+
+  - name: to install apache
+    yum: name=httpd state=latest
+    notify: httpd
+    tags: apache
+
+  - name: To install elinks
+    yum: name=elinks state=latest
+    tags: elinks
+
+  handlers:
+  - name: restart the service
+    service: name=mariadb-server state=restarted enabled=true
+  - name: httpd
+    service: name=httpd state=restarted enabled=true

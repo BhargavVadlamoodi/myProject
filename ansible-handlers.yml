@@ -1,0 +1,13 @@
+---
+- hosts: all
+  remote_user: ansible
+  sudo: yes
+  tasks:
+  - name: To install httpd on servers
+    yum: name=httpd state=latest
+  - name: To configure the Web Server
+    copy: src=index.html dest=/var/www/html/index.html 
+    notify: service
+  handlers:
+  - name: service
+    service: name=httpd state=restarted enabled=true

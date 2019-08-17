@@ -1,0 +1,11 @@
+---
+- name: To copy new files.
+  hosts: all
+  remote_user: ansible
+  become: true
+  tasks:
+  - name: To copy the file myfile.sh to the target servers.
+    copy:
+      src: myfile.sh
+      dest: /bin/
+      mode: 0755

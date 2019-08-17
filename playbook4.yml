@@ -1,0 +1,19 @@
+---
+- name: To write a the block, rescue and always mode. 
+  hosts: all
+  remote_user: ansible
+  become: true
+  tasks:
+  - block:
+    - name: To install openssh package.
+      yum: name=openssh state=latest
+      
+    rescue: 
+    - name: To check the file /etc/ssh
+      file: path=/etc/ssh/sshd_config state=touch
+
+    always:
+    - name: To restart the service.
+      service: name=sshd state=restarted
+
+

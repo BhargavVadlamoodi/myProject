@@ -1,0 +1,22 @@
+---
+- name: To execute the tasks on the servers.
+  hosts: all
+  remote_user: ansible
+  become: true
+  vars:
+    user: ansible1
+  tasks:
+  - name: To install the package.
+    yum: name=httpd state=latest
+    register: result
+
+  - name: Tp create file on the servers.
+    file:
+      path: /var/www/html/index.html
+      state: touch
+      mode: 0644
+    when: result.rc == 0
+
+  - name: TO debug the module.
+    debug: var=result
+

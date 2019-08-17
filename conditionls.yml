@@ -1,0 +1,9 @@
+---
+- name: To use the conditionals.
+  hosts: all
+  remote_user: ansible
+  become: true
+  tasks:
+  - name: Create user on the specified server. 
+    user: name=user_condition state=present
+    when: inventory_hostname in groups['mygroup2']   

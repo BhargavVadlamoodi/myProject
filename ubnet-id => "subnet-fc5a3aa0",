@@ -1,0 +1,375 @@
+aio_agent_version => 5.5.14
+augeas => {
+  version => "1.11.0"
+}
+disks => {
+  xvda => {
+    size => "8.00 GiB",
+    size_bytes => 8589934592
+  }
+}
+dmi => {
+  bios => {
+    release_date => "08/24/2006",
+    vendor => "Xen",
+    version => "4.2.amazon"
+  },
+  chassis => {
+    type => "Other"
+  },
+  manufacturer => "Xen",
+  product => {
+    name => "HVM domU"
+  }
+}
+ec2_metadata => {
+  ami-id => "ami-02eac2c0129f6376b",
+  ami-launch-index => "0",
+  ami-manifest-path => "(unknown)",
+  block-device-mapping => {
+    ami => "/dev/sda1",
+    root => "/dev/sda1"
+  },
+  events => {
+    maintenance => {
+      history => "[]",
+      scheduled => "[]"
+    }
+  },
+  hostname => "ip-172-31-45-144.ec2.internal",
+  identity-credentials => {
+    ec2 => {
+      info => "{
+  "Code" : "Success",
+  "LastUpdated" : "2019-06-29T08:46:27Z",
+  "AccountId" : "204286731816"
+}"
+    }
+  },
+  instance-action => "none",
+  instance-id => "i-0be77e4fc31b72bb6",
+  instance-type => "t2.micro",
+  local-hostname => "ip-172-31-45-144.ec2.internal",
+  local-ipv4 => "172.31.45.144",
+  mac => "0e:dd:1d:3d:a0:46",
+  metrics => {
+    vhostmd => "<?xml version="1.0" encoding="UTF-8"?>"
+  },
+  network => {
+    interfaces => {
+      macs => {
+        0e:dd:1d:3d:a0:46 => {
+          device-number => "0",
+          interface-id => "eni-07072f92e328e7c09",
+          ipv4-associations => {
+            100.26.200.142 => "172.31.45.144"
+          },
+          local-hostname => "ip-172-31-45-144.ec2.internal",
+          local-ipv4s => "172.31.45.144",
+          mac => "0e:dd:1d:3d:a0:46",
+          owner-id => "204286731816",
+          public-hostname => "ec2-100-26-200-142.compute-1.amazonaws.com",
+          public-ipv4s => "100.26.200.142",
+          security-group-ids => "sg-0d3ac1d19640195b0",
+          security-groups => "CentOS 7 -x86_64- - with Updates HVM-1901_01-AutogenByAWSMP-1",
+          subnet-id => "subnet-fc5a3aa0",
+          subnet-ipv4-cidr-block => "172.31.32.0/20",
+          vpc-id => "vpc-86e85bfc",
+          vpc-ipv4-cidr-block => "172.31.0.0/16",
+          vpc-ipv4-cidr-blocks => "172.31.0.0/16"
+        }
+      }
+    }
+  },
+  placement => {
+    availability-zone => "us-east-1d"
+  },
+  product-codes => "aw0evgkw8e5c1q413zgy5pjce",
+  profile => "default-hvm",
+  public-hostname => "ec2-100-26-200-142.compute-1.amazonaws.com",
+  public-ipv4 => "100.26.200.142",
+  public-keys => {
+    0 => {
+      openssh-key => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCTiPVfS1t4yIQ9uTWvhqXGVGWEPTU6k7C+CV8fOqjYZLXqESxnunWmkxgxLXsQjwVcfJjqWgm+9yrAvT+jFawMXWbsHEu0yx6FR5N5nlNpgGUkXgRymqD+EYtLl2aCQhHbchPQnho3nmwyOS2FEEi6lsZP2NesXDYtn/oJ8QrSE+Y8pUNVt+D4BPBD/0jcgfYm1i+oCUyWBdfoMBprmK4sU4ceXQ9DPz4iZ78y32MWOfKypHzSA1kQhDmYWjZdiFRyYjaM1wGkSuMbKXonGmTg+MQCaRr+P/HLhq1tk6m2yXDTHW7MY4nhJASOGVhgTsZcwpzJNcr6XaFWwN06Jf5b RHEL8"
+    }
+  },
+  reservation-id => "r-0af9715dfafccd07d",
+  security-groups => "CentOS 7 -x86_64- - with Updates HVM-1901_01-AutogenByAWSMP-1",
+  services => {
+    domain => "amazonaws.com",
+    partition => "aws"
+  }
+}
+facterversion => 3.11.8
+filesystems => xfs
+fips_enabled => false
+hypervisors => {
+  xen => {
+    context => "hvm",
+    privileged => false
+  }
+}
+identity => {
+  gid => 1000,
+  group => "centos",
+  privileged => false,
+  uid => 1000,
+  user => "centos"
+}
+is_virtual => true
+kernel => Linux
+kernelmajversion => 3.10
+kernelrelease => 3.10.0-957.21.2.el7.x86_64
+kernelversion => 3.10.0
+load_averages => {
+  15m => 0.02,
+  1m => 0,
+  5m => 0.02
+}
+memory => {
+  system => {
+    available => "868.19 MiB",
+    available_bytes => 910364672,
+    capacity => "12.25%",
+    total => "989.45 MiB",
+    total_bytes => 1037508608,
+    used => "121.25 MiB",
+    used_bytes => 127143936
+  }
+}
+mountpoints => {
+  / => {
+    available => "6.32 GiB",
+    available_bytes => 6788530176,
+    capacity => "20.86%",
+    device => "/dev/xvda1",
+    filesystem => "xfs",
+    options => [
+      "rw",
+      "seclabel",
+      "relatime",
+      "attr2",
+      "inode64",
+      "noquota"
+    ],
+    size => "7.99 GiB",
+    size_bytes => 8578400256,
+    used => "1.67 GiB",
+    used_bytes => 1789870080
+  },
+  /dev/shm => {
+    available => "494.72 MiB",
+    available_bytes => 518754304,
+    capacity => "0%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "seclabel",
+      "nosuid",
+      "nodev"
+    ],
+    size => "494.72 MiB",
+    size_bytes => 518754304,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /run => {
+    available => "481.91 MiB",
+    available_bytes => 505315328,
+    capacity => "2.59%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "seclabel",
+      "nosuid",
+      "nodev",
+      "mode=755"
+    ],
+    size => "494.72 MiB",
+    size_bytes => 518754304,
+    used => "12.82 MiB",
+    used_bytes => 13438976
+  },
+  /run/user/1000 => {
+    available => "98.95 MiB",
+    available_bytes => 103751680,
+    capacity => "0%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "seclabel",
+      "nosuid",
+      "nodev",
+      "relatime",
+      "size=101320k",
+      "mode=700",
+      "uid=1000",
+      "gid=1000"
+    ],
+    size => "98.95 MiB",
+    size_bytes => 103751680,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /sys/fs/cgroup => {
+    available => "494.72 MiB",
+    available_bytes => 518754304,
+    capacity => "0%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "ro",
+      "seclabel",
+      "nosuid",
+      "nodev",
+      "noexec",
+      "mode=755"
+    ],
+    size => "494.72 MiB",
+    size_bytes => 518754304,
+    used => "0 bytes",
+    used_bytes => 0
+  }
+}
+networking => {
+  dhcp => "172.31.32.1",
+  domain => "ec2.internal",
+  fqdn => "ip-172-31-45-144.ec2.internal",
+  hostname => "ip-172-31-45-144",
+  interfaces => {
+    eth0 => {
+      bindings => [
+        {
+          address => "172.31.45.144",
+          netmask => "255.255.240.0",
+          network => "172.31.32.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::cdd:1dff:fe3d:a046",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      dhcp => "172.31.32.1",
+      ip => "172.31.45.144",
+      ip6 => "fe80::cdd:1dff:fe3d:a046",
+      mac => "0e:dd:1d:3d:a0:46",
+      mtu => 9001,
+      netmask => "255.255.240.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "172.31.32.0",
+      network6 => "fe80::"
+    },
+    lo => {
+      bindings => [
+        {
+          address => "127.0.0.1",
+          netmask => "255.0.0.0",
+          network => "127.0.0.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "::1",
+          netmask => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+          network => "::1"
+        }
+      ],
+      ip => "127.0.0.1",
+      ip6 => "::1",
+      mtu => 65536,
+      netmask => "255.0.0.0",
+      netmask6 => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      network => "127.0.0.0",
+      network6 => "::1"
+    }
+  },
+  ip => "172.31.45.144",
+  ip6 => "fe80::cdd:1dff:fe3d:a046",
+  mac => "0e:dd:1d:3d:a0:46",
+  mtu => 9001,
+  netmask => "255.255.240.0",
+  netmask6 => "ffff:ffff:ffff:ffff::",
+  network => "172.31.32.0",
+  network6 => "fe80::",
+  primary => "eth0"
+}
+os => {
+  architecture => "x86_64",
+  family => "RedHat",
+  hardware => "x86_64",
+  name => "CentOS",
+  release => {
+    full => "7.6.1810",
+    major => "7",
+    minor => "6"
+  },
+  selinux => {
+    config_mode => "enforcing",
+    config_policy => "targeted",
+    current_mode => "enforcing",
+    enabled => true,
+    enforced => true,
+    policy_version => "31"
+  }
+}
+partitions => {
+  /dev/xvda1 => {
+    mount => "/",
+    size => "8.00 GiB",
+    size_bytes => 8588886016
+  }
+}
+path => /usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/home/centos/.local/bin:/home/centos/bin
+processors => {
+  count => 1,
+  isa => "x86_64",
+  models => [
+    "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+  ],
+  physicalcount => 1
+}
+ruby => {
+  platform => "x86_64-linux",
+  sitedir => "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+  version => "2.4.5"
+}
+ssh => {
+  ecdsa => {
+    fingerprints => {
+      sha1 => "SSHFP 3 1 ec15a285ad37b125fa866c1b2f716191f533fcca",
+      sha256 => "SSHFP 3 2 b8a0bbc6c274aad4977894268ea84f88674339e397adfc0805d28d62567bfdc8"
+    },
+    key => "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBILcGxLmpkikTlV3NxumnTBQmL+hY+toXyM7CPQfzy9YhEenkvwBZn7UjzVbYeBIkpx5TzRv1pZDm6SSpNfOegI=",
+    type => "ecdsa-sha2-nistp256"
+  },
+  ed25519 => {
+    fingerprints => {
+      sha1 => "SSHFP 4 1 2ff88f9b78cea9c094518313b9286c6aea1d55b5",
+      sha256 => "SSHFP 4 2 323629dfe82ec47cee99e89aa31d5dc0d22824df6feaa7c22e720190b4e681f8"
+    },
+    key => "AAAAC3NzaC1lZDI1NTE5AAAAIB/G7l1RQGWbWzkWsPij6+4dVT0q4OB6SaniS7xzYL+l",
+    type => "ssh-ed25519"
+  },
+  rsa => {
+    fingerprints => {
+      sha1 => "SSHFP 1 1 9f8b90e74da2d582ca6d8169bfe9264c3751757f",
+      sha256 => "SSHFP 1 2 6e2a272f2e09beb551323f5300eb791e618c57c5122a3f34be18e074b04c7029"
+    },
+    key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQDoWQT3tNN45tUOcBFNVCO3cbhTwLMWcs+z6GsvphgOSpIHVMo3QoRQVizz1TtIg5NsUeqtWWWEquUtYY7e6UJThz23QRCPc+9Ipfxkcmsa93WX54+wttalSBYBTw6wlBamM0o4ccwNPEvpJSQS6PnyeTenaRta66JgFhK2ASSVjYkVbGrXRTAIOOuSp53CHOMrkpA/rd/S0yETBYj4/UC2F51TeX9hllQzjq7wt83+i+gL/CI8xm7i7FEMe9SsaGf+B4WzldyZwfzKv0zbaKVTPFMFeK4awwffeGSOw9Yyz29PU1SykKM0Hb/IzgW62A0d/Y7t/n2SDS2AO6toCwJP",
+    type => "ssh-rsa"
+  }
+}
+system_uptime => {
+  days => 0,
+  hours => 0,
+  seconds => 317,
+  uptime => "0:05 hours"
+}
+timezone => UTC
+virtual => xenu

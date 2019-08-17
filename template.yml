@@ -1,0 +1,17 @@
+---
+- name: To deploy the template content.
+  hosts: all
+  remote_user: ansible
+  become: true
+  tasks: 
+  - name: To install the apache  package.
+    yum: name=httpd state=latest
+   
+  - name: To copy j2 template on the servers.
+    template: src=index.html.j2 dest=/var/www/html/index.html
+
+  - name: TO restart the service.
+    service: name=httpd state=restarted enabled=true
+
+  - name: To download the files.
+    uri: url=https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.5.10-1.el7.ans.src.rpm dest=/home/ansible

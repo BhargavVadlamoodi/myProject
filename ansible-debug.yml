@@ -1,0 +1,11 @@
+---
+- name: To debug the tasks.
+  hosts: all
+  remote_user: ansible
+  become: true
+  tasks:
+  - name: To create user
+    user: name=debuguser state=present
+    register: logs
+  - name: To read the logs
+    debug: var=logs
